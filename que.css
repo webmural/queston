@@ -1,0 +1,69 @@
+* { box-sizing: border-box }
+
+:any-link {
+  color: inherit;
+  cursor: grabbing;
+  transition: 500ms filter ease-in;
+}
+
+:hover {
+  text-decoration-style: double;
+}
+
+:focus {
+  outline: thick double;
+  text-decoration-style: dotted;
+  filter: hue-rotate(-30deg);
+  transition-timing-function: ease-out;
+}
+
+:active {
+  filter: hue-rotate(-60deg);
+}
+
+html {
+  font: max(3ch, 2vmax + 1vmin) sans-serif;
+  line-height: 1.618;
+}
+
+body {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+article {
+  display: flex;
+  flex-flow: column;
+  contain: content;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  padding-block: 1rem;
+  text-align: center;
+  transform: rotate(3deg);
+}
+
+a {
+  border-radius: 100%;
+  display: flex;
+  padding: 1ch;
+  margin: auto;
+  margin-bottom: 1ch;
+}
+
+nav {
+  display: flex;
+  flex-flow: column;
+  padding: 1em;
+  transform: rotate(3deg);
+}
+
+.bip { font-size: 3em }
+.bop { font-size: 3em; writing-mode: sideways-lr }
+.bup { font-size: 5em; }
+
+@media (orientation: portrait) {
+  .bip { writing-mode: sideways-rl }
+}
